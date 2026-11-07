@@ -1069,7 +1069,7 @@ a {
   display: grid;
   place-items: center;
   background: none;
-  color: var(--white-color);
+  color: var(--text-main);
   font-size: 1.5rem;
   cursor: pointer;
 }
