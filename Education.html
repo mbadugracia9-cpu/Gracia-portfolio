@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090a10" />
+  <title>Education & Certifications | Portfolio</title>
+  <link rel="stylesheet" href="education.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"rel="stylesheet"/>
+  <script>
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem("site-theme") === "light" ? "light" : "dark";
+      document.documentElement.lang = localStorage.getItem("site-language") === "fr" ? "fr" : "en";
+      document.querySelector('meta[name="theme-color"]').content =
+        document.documentElement.dataset.theme === "light" ? "#f4f6fb" : "#090a10";
+    } catch {
+      document.documentElement.dataset.theme = "dark";
+    }
+  </script>
+</head>
+<body>
+
+  <header class="header container">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo" aria-label="Home">
+        <i class="ri-fire-fill" aria-hidden="true"></i>
+      </a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="#overview" class="nav__link"><span>Overview</span><span>Overview</span></a></li>
+          <li><a href="#learning-path" class="nav__link"><span>Learning Path</span><span>Learning Path</span></a></li>
+          <li><a href="#credentials" class="nav__link"><span>Credentials</span><span>Credentials</span></a></li>
+          <li><a href="#skills" class="nav__link"><span>Skills</span><span>Skills</span></a></li>
+          <li><a href="#testimonials" class="nav__link"><span>Reviews</span><span>Reviews</span></a></li>
+          <li><a href="#contact" class="nav__link"><span>Contact</span><span>Contact</span></a></li>
+        </ul>
+      </div>
+      <div class="nav__buttons">
+        <button class="nav__email" id="nav-email" type="button">
+          <span id="nav-copy">mbadugracia9@email.com</span>
+          <span id="nav-text">Copy email</span>
+        </button>
+        <div class="site-preferences" aria-label="Site preferences">
+          <button class="site-control" type="button" data-language-toggle aria-label="Switch language to French" title="Switch language to French">
+            <span class="site-control-face" aria-hidden="true"><i class="ri-translate-2"></i><span data-language-label>FR</span></span>
+            <span class="site-control-face site-control-face-next" aria-hidden="true"><i class="ri-translate-2"></i><span data-language-label>FR</span></span>
+          </button>
+          <button class="site-control" type="button" data-theme-toggle aria-label="Switch to light mode" title="Switch to light mode">
+            <span class="site-control-face" aria-hidden="true"><i class="ri-sun-line"></i></span>
+            <span class="site-control-face site-control-face-next" aria-hidden="true"><i class="ri-sun-line"></i></span>
+          </button>
+        </div>
+        <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Toggle navigation">
+          <i class="ri-menu-line nav__burger" aria-hidden="true"></i>
+          <i class="ri-close-line nav__close" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Header Section -->
+    <section class="hero-section" id="overview">
+      <span class="badge">Academic Journey</span>
+      <h1>Education & <span>Credentials</span></h1>
+      <p>My engineering degree and certificates in English, web development, web design, digital marketing, music, and teaching and mentorship.</p>
+    </section>
+
+    <!-- Overview Stats Bar -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <h3>2</h3>
+        <p>Degrees (including 1 upcoming)</p>
+      </div>
+      <div class="stat-card">
+        <h3>8</h3>
+        <p>Certificates</p>
+      </div>
+      <div class="stat-card">
+        <h3>Electronics</h3>
+        <p>Engineering specialization</p>
+      </div>
+      <div class="stat-card">
+        <h3>5</h3>
+        <p>Bootcamps</p>
+      </div>
+    </section>
+
+    <section class="learning-path" id="learning-path" aria-labelledby="learning-path-title">
+      <div class="section-header">
+        <div>
+          <h2 id="learning-path-title">Learning path</h2>
+          <p class="section-subtitle">A progression from technical foundations to continued study.</p>
+        </div>
+      </div>
+      <ol class="learning-path-list">
+        <li class="learning-path-item">
+          <span class="learning-path-step">01</span>
+          <div>
+            <h3>Engineering foundation</h3>
+            <p>Built a foundation in engineering with a specialization in electronics.</p>
+          </div>
+        </li>
+        <li class="learning-path-item">
+          <span class="learning-path-step">02</span>
+          <div>
+            <h3>Expanding practical skills</h3>
+            <p>Continued learning across web development and design, English, digital marketing, music, and office automation.</p>
+          </div>
+        </li>
+        <li class="learning-path-item">
+          <span class="learning-path-step">03</span>
+          <div>
+            <h3>Teaching and mentorship</h3>
+            <p>Developed skills in teaching and mentorship to support learners through workshops and collaborative activities.</p>
+          </div>
+        </li>
+        <li class="learning-path-item learning-path-item-upcoming">
+          <span class="learning-path-step">04</span>
+          <div>
+            <h3>Next goal: Computer Science</h3>
+            <p>Plan to pursue further study in computer science and build on the engineering foundation.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="credentials-section" id="credentials" aria-labelledby="credentials-title">
+      <div class="section-header">
+        <div>
+          <h2 id="credentials-title">Credentials</h2>
+          <p class="section-subtitle">Explore my degrees, certificates, and bootcamp training.</p>
+        </div>
+      </div>
+      <p class="certificate-note">Certificate files have not been provided yet, so the view buttons are unavailable.</p>
+
+      <!-- Controls: Filter Tabs & Search Bar -->
+      <div class="controls-wrapper">
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="degree">Degrees</button>
+        <button class="filter-btn" data-filter="certificate">Certificates</button>
+        <button class="filter-btn" data-filter="bootcamp">Bootcamps</button>
+      </div>
+
+      <div class="search-box">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="searchInput" placeholder="Search by degree, certificate, or subject..." />
+      </div>
+      </div>
+
+      <!-- Timeline / Education Items -->
+      <div class="timeline-container" id="educationList" aria-label="Education credentials">
+
+      <!-- Engineering degree -->
+      <article class="edu-card" data-category="degree">
+        <div class="card-header">
+          <div class="title-group">
+            <span class="tag degree-tag">Degree</span>
+            <h2>Bachelor's Degree in Engineering</h2>
+            <h3 class="institution">Specialization: Electronics</h3>
+          </div>
+        </div>
+        <p class="description">
+          Bachelor's degree in engineering, with a specialization in electronics.
+        </p>
+        <div class="skills-list">
+          <span>Engineering</span>
+          <span>Electronics</span>
+        </div>
+      </article>
+
+      <article class="edu-card" data-category="degree">
+        <div class="card-header">
+          <div class="title-group">
+            <span class="tag degree-tag">Degree</span>
+            <span class="tag upcoming-tag">Upcoming</span>
+            <h2>Upcoming Computer Science Degree</h2>
+            <h3 class="institution">Computer Science</h3>
+          </div>
+        </div>
+        <p class="description">Planned degree studies in computer science.</p>
+        <div class="skills-list">
+          <span>Computer Science</span>
+        </div>
+      </article>
+
+      <article class="edu-card" data-category="certificate">
+        <div class="card-header">
+          <div class="title-group">
+            <span class="tag cert-tag">Certification</span>
+            <h2>English Language Certificate</h2>
+            <h3 class="institution">English language</h3>
+          </div>
+        </div>
+        <p class="description">Certificate in English.</p>
+        <div class="skills-list">
+          <span>English</span>
+        </div>
+        <button class="view-certificate-btn" type="button" disabled title="Certificate file not provided">View certificate</button>
+      </article>
+
+      <article class="edu-card" data-category="certificate">
+        <div class="card-header">
+          <div class="title-group">
+            <span class="tag cert-tag">Certification</span>
+            <h2>Web Development Certificate</h2>
+            <h3 class="institution">Web development</h3>
+          </div>
+        </div>
+        <p class="description">
+          Certificate in web development.
+        </p>
+        <div class="skills-list">
+          <span>Web development</span>
+        </div>
+        <button class="view-certificate-btn" type="button" disabled title="Certificate file not provided">View certificate</button>
+      </article>
+
+      <article class="edu-card" data-category="bootcamp">
+        <div class="card-header">
+          <div class="title-group">
+            <span class="tag bootcamp-tag">Bootcamp</span>
+            <h2>Web Development Bootcamp</h2>
+            <h3 class="institution">Web development</h3>
+          </div>
+        </div>
+        <p class="description">Completed bootcamp training in web development.</p>
+        <div class="skills-list">
+          <span>Web development</span>
+        </div>
+      </article>
+
+      <article class="edu-card" data-category="certificate">
+        <div class="card-header">
+          <div class="title-group">
+            <span class="tag cert-tag">Certification</span>
+            <h2>Web Design Certificate</h2>
+            <h3 class="institution">Web design</h3>
+          </div>
+        </div>
+        <p class="description">Certificate in web design.</p>
+        <div class="skills-list">
+          <span>Web design</span>
+        </div>
+        <button class="view-certificate-btn" type="button" disabled title="Certificate file not provided">View certificate</button>
+      </article>
+
+      <article class="edu-card" data-category="certificate">
+        <div class="card-header">
+          <div class="title-group">
+            <span class="tag cert-tag">Certification</span>
+            <h2>Digital Marketing Certificate</h2>
+            <h3 class="institution">Digital marketing</h3>
+          </div>
+        </div>
+        <p class="description">Certificate in digital marketing.</p>
+        <div class="skills-list">
+          <span>Digital marketing</span>
+        </div>
+        <button class="view-certificate-btn" type="button" disabled title="Certificate file not provided">View certificate</button>
+      </article>
+
+      <article class="edu-card" data-category="bootcamp">
+        <div class="card-header">
+          <div class="title-group">
+            <span class="tag bootcamp-tag">Bootcamp</span>
+            <h2>Digital Marketing Bootcamp</h2>
+            <h3 class="institution">Digital marketing</h3>
+          </div>
+        </div>
+        <p class="description">Completed bootcamp training in digital marketing.</p>
+        <div class="skills-list">
+          <span>Digital marketing</span>
+        </div>
+      </article>
+
+      <article class="edu-card" data-category="certificate">
+        <div class="card-header">
+          <div class="title-group">
+            <span class="tag cert-tag">Certification</span>
+            <h2>Music Certificate</h2>
+            <h3 class="institution">Music</h3>
+          </div>
+        </div>
+        <p class="description">Certificate in music.</p>
+        <div class="skills-list">
+          <span>Music</span>
+        </div>
+        <button class="view-certificate-btn" type="button" disabled title="Certificate file not provided">View certificate</button>
+      </article>
+
+      <article class="edu-card" data-category="bootcamp">
+        <div class="card-header">
+          <div class="title-group">
+            <span class="tag bootcamp-tag">Bootcamp</span>
+            <h2>Music Bootcamp</h2>
+            <h3 class="institution">Music</h3>
+          </div>
+        </div>
+        <p class="description">Completed bootcamp training in music.</p>
+        <div class="skills-list">
+          <span>Music</span>
+        </div>
+      </article>
+
+      <article class="edu-card" data-category="certificate">
+        <div class="card-header">
+          <div class="title-group">
+            <span class="tag cert-tag">Certification</span>
+            <h2>Teaching &amp; Mentorship Certificate</h2>
+            <h3 class="institution">Teaching and mentorship</h3>
+          </div>
+        </div>
+        <p class="description">Certificate in teaching and mentorship.</p>
+        <div class="skills-list">
+          <span>Teaching</span>
+          <span>Mentorship</span>
+        </div>
+        <button class="view-certificate-btn" type="button" disabled title="Certificate file not provided">View certificate</button>
+      </article>
+
+      <article class="edu-card" data-category="certificate">
+        <div class="card-header">
+          <div class="title-group">
+            <span class="tag cert-tag">Certification</span>
+            <h2>Office Automation Certificate</h2>
+            <h3 class="institution">Office automation</h3>
+          </div>
+        </div>
+        <p class="description">Certificate in office automation.</p>
+        <div class="skills-list">
+          <span>Office automation</span>
+        </div>
+        <button class="view-certificate-btn" type="button" disabled title="Certificate file not provided">View certificate</button>
+      </article>
+
+      <article class="edu-card" data-category="certificate">
+        <div class="card-header">
+          <div class="title-group">
+            <span class="tag cert-tag">Certification</span>
+            <h2>Hosting Certificate</h2>
+            <h3 class="institution">Hosting</h3>
+          </div>
+        </div>
+        <p class="description">Certificate in hosting.</p>
+        <div class="skills-list">
+          <span>Hosting</span>
+        </div>
+        <button class="view-certificate-btn" type="button" disabled title="Certificate file not provided">View certificate</button>
+      </article>
+
+      <article class="edu-card" data-category="bootcamp">
+        <div class="card-header">
+          <div class="title-group">
+            <span class="tag bootcamp-tag">Bootcamp</span>
+            <h2>Hosting Bootcamp</h2>
+            <h3 class="institution">Hosting</h3>
+          </div>
+        </div>
+        <p class="description">Bootcamp training in hosting.</p>
+        <div class="skills-list">
+          <span>Hosting</span>
+        </div>
+      </article>
+
+      <article class="edu-card" data-category="bootcamp">
+        <div class="card-header">
+          <div class="title-group">
+            <span class="tag bootcamp-tag">Bootcamp</span>
+            <h2>Office Automation Bootcamp</h2>
+            <h3 class="institution">Office automation</h3>
+          </div>
+        </div>
+        <p class="description">Bootcamp training in office automation.</p>
+        <div class="skills-list">
+          <span>Office automation</span>
+        </div>
+      </article>
+
+      </div>
+
+      <!-- Empty State (Shown when search has no matches) -->
+      <div id="noResults" class="no-results hidden">
+        <p>No matching education records found.</p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills-section" aria-labelledby="skills-title">
+      <div class="section-header">
+        <div>
+          <h2 id="skills-title">Skills &amp; Strengths</h2>
+          <p class="section-subtitle">A mix of practical expertise and people-focused strengths.</p>
+        </div>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-group">
+          <div class="skill-group-heading">
+            <i class="bx bx-code-alt" aria-hidden="true"></i>
+            <h3>Hard Skills</h3>
+          </div>
+          <div class="skills-list">
+            <span>HTML &amp; CSS</span>
+            <span>JavaScript</span>
+            <span>Node.js &amp; Python</span>
+            <span>Responsive web design</span>
+            <span>Visual identity &amp; branding</span>
+            <span>Photography &amp; visual storytelling</span>
+            <span>Music &amp; creative expression</span>
+            <span>Education &amp; workshop design</span>
+          </div>
+        </article>
+        <article class="skill-group">
+          <div class="skill-group-heading">
+            <i class="bx bx-group" aria-hidden="true"></i>
+            <h3>Soft Skills</h3>
+          </div>
+          <div class="skills-list">
+            <span>Communication</span>
+            <span>Creativity</span>
+            <span>Collaboration</span>
+            <span>Mentorship</span>
+            <span>Adaptability</span>
+            <span>Problem-solving</span>
+            <span>Empathy</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="testimonials-section" aria-labelledby="testimonials-title">
+      <div class="section-header">
+        <div>
+          <h2 id="testimonials-title">Testimonials</h2>
+          <p class="section-subtitle">Sample quotes are placeholders; replace them with genuine learner feedback.</p>
+        </div>
+      </div>
+
+      <div class="testimonial-list" role="list" aria-label="Education testimonials">
+        <article class="testimonial-card" role="listitem">
+          <div class="testimonial-card__border"><div class="testimonial-card__portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div></div>
+          <h3 class="testimonial-card__name">Student</h3>
+          <span class="testimonial-card__profession">Learner testimonial</span>
+          <div class="testimonial-card__info">
+            <i class="ri-information-line testimonial-card__info-icon" aria-hidden="true"></i>
+            <div class="testimonial-card__info-portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div>
+            <div class="testimonial-card__info-data">
+              <h3>Student</h3>
+              <blockquote>“Gracia made challenging concepts easier to understand and created a welcoming space to ask questions and learn.”</blockquote>
+              <span>Replace with a real student name</span>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card" role="listitem">
+          <div class="testimonial-card__border"><div class="testimonial-card__portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div></div>
+          <h3 class="testimonial-card__name">Workshop participant</h3>
+          <span class="testimonial-card__profession">Learner testimonial</span>
+          <div class="testimonial-card__info">
+            <i class="ri-information-line testimonial-card__info-icon" aria-hidden="true"></i>
+            <div class="testimonial-card__info-portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div>
+            <div class="testimonial-card__info-data">
+              <h3>Workshop participant</h3>
+              <blockquote>“The lessons were engaging, well organized, and full of practical activities that helped the ideas stick.”</blockquote>
+              <span>Replace with a real participant name</span>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card" role="listitem">
+          <div class="testimonial-card__border"><div class="testimonial-card__portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div></div>
+          <h3 class="testimonial-card__name">Parent</h3>
+          <span class="testimonial-card__profession">Learner testimonial</span>
+          <div class="testimonial-card__info">
+            <i class="ri-information-line testimonial-card__info-icon" aria-hidden="true"></i>
+            <div class="testimonial-card__info-portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div>
+            <div class="testimonial-card__info-data">
+              <h3>Parent</h3>
+              <blockquote>“Gracia encouraged curiosity and confidence, making learning a positive experience for everyone in the group.”</blockquote>
+              <span>Replace with a real parent name</span>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card" role="listitem">
+          <div class="testimonial-card__border"><div class="testimonial-card__portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div></div>
+          <h3 class="testimonial-card__name">Mentorship participant</h3>
+          <span class="testimonial-card__profession">Learner testimonial</span>
+          <div class="testimonial-card__info">
+            <i class="ri-information-line testimonial-card__info-icon" aria-hidden="true"></i>
+            <div class="testimonial-card__info-portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div>
+            <div class="testimonial-card__info-data">
+              <h3>Mentorship participant</h3>
+              <blockquote>“The mentorship helped me approach new challenges with more confidence and a clearer plan for learning.”</blockquote>
+              <span>Replace with a real participant name</span>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card" role="listitem">
+          <div class="testimonial-card__border"><div class="testimonial-card__portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div></div>
+          <h3 class="testimonial-card__name">Learning program participant</h3>
+          <span class="testimonial-card__profession">Learner testimonial</span>
+          <div class="testimonial-card__info">
+            <i class="ri-information-line testimonial-card__info-icon" aria-hidden="true"></i>
+            <div class="testimonial-card__info-portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div>
+            <div class="testimonial-card__info-data">
+              <h3>Learning program participant</h3>
+              <blockquote>“The creative activities made it easy for everyone to join in, share ideas, and learn together.”</blockquote>
+              <span>Replace with a real participant name</span>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card" role="listitem">
+          <div class="testimonial-card__border"><div class="testimonial-card__portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div></div>
+          <h3 class="testimonial-card__name">Office automation learner</h3>
+          <span class="testimonial-card__profession">Learner testimonial</span>
+          <div class="testimonial-card__info">
+            <i class="ri-information-line testimonial-card__info-icon" aria-hidden="true"></i>
+            <div class="testimonial-card__info-portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div>
+            <div class="testimonial-card__info-data">
+              <h3>Office automation learner</h3>
+              <blockquote>“The practical office automation exercises helped me feel more confident using everyday productivity tools.”</blockquote>
+              <span>Sample quote; replace with genuine learner feedback.</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="footer">
+    <div class="container footer-content">
+      <div>
+        <h3>Work with me.</h3>
+        <p>Your vision. My creativity. One collaboration.</p>
+      </div>
+      <div class="footer-actions">
+        <a href="mailto:mbadugracia9@email.com" class="btn-primary">mbadugracia9@email.com</a>
+        <div class="social-links">
+          <a href="https://github.com/mbadugracia9-cpu" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <span class="social-link-pending" aria-label="Discord link not provided" title="Discord link not provided"><i class="fa-brands fa-discord" aria-hidden="true"></i></span>
+          <a href="https://www.linkedin.com/in/gracia-mbadu-b7876130a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/mbadugracia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/mbadugracia" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>&copy; 2026 Gracia MBADU. Designed and developed with semantic HTML, CSS, and JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

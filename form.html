@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090a10">
+  <title>Contact Gracia | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem("site-theme") === "light" ? "light" : "dark";
+      document.documentElement.lang = localStorage.getItem("site-language") === "fr" ? "fr" : "en";
+      document.querySelector('meta[name="theme-color"]').content =
+        document.documentElement.dataset.theme === "light" ? "#f4f6fb" : "#090a10";
+    } catch {
+      document.documentElement.dataset.theme = "dark";
+    }
+  </script>
+</head>
+<body>
+  <header class="header container">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo" aria-label="Home">
+        <i class="ri-fire-fill" aria-hidden="true"></i>
+      </a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link"><span>Home</span><span>Home</span></a></li>
+          <li><a href="index.html#work" class="nav__link"><span>Projects</span><span>Projects</span></a></li>
+          <li><a href="index.html#intersection" class="nav__link"><span>Vision</span><span>Vision</span></a></li>
+          <li><a href="index.html#testimonials" class="nav__link"><span>Reviews</span><span>Reviews</span></a></li>
+          <li><a href="index.html#about" class="nav__link"><span>About</span><span>About</span></a></li>
+          <li><a href="index.html#skills" class="nav__link"><span>Skills</span><span>Skills</span></a></li>
+          <li><a href="#contact-form" class="nav__link"><span>Contact</span><span>Contact</span></a></li>
+        </ul>
+      </div>
+      <div class="nav__buttons">
+        <button class="nav__email" id="nav-email" type="button">
+          <span id="nav-copy">mbadugracia9@email.com</span>
+          <span id="nav-text">Copy email</span>
+        </button>
+        <div class="site-preferences" aria-label="Site preferences">
+          <button class="site-control" type="button" data-language-toggle aria-label="Switch language to French" title="Switch language to French">
+            <span class="site-control-face" aria-hidden="true"><i class="ri-translate-2"></i><span data-language-label>FR</span></span>
+            <span class="site-control-face site-control-face-next" aria-hidden="true"><i class="ri-translate-2"></i><span data-language-label>FR</span></span>
+          </button>
+          <button class="site-control" type="button" data-theme-toggle aria-label="Switch to light mode" title="Switch to light mode">
+            <span class="site-control-face" aria-hidden="true"><i class="ri-sun-line"></i></span>
+            <span class="site-control-face site-control-face-next" aria-hidden="true"><i class="ri-sun-line"></i></span>
+          </button>
+        </div>
+        <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Toggle navigation">
+          <i class="ri-menu-line nav__burger" aria-hidden="true"></i>
+          <i class="ri-close-line nav__close" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <main class="contact-section">
+    <div class="contact-layout">
+      <section class="contact-intro" aria-labelledby="contact-title">
+        <span class="contact-eyebrow"><span class="contact-status-dot"></span> Let's create something meaningful</span>
+        <h1 id="contact-title">Have a project<br>in <span>mind?</span></h1>
+        <p>Tell me a little about what you’re working on. I’ll get back to you as soon as I can.</p>
+
+        <div class="contact-detail">
+          <span class="contact-detail-icon"><i class="ri-mail-line" aria-hidden="true"></i></span>
+          <div>
+            <span class="contact-detail-label">Email</span>
+            <a href="mailto:mbadugracia9@email.com">mbadugracia9@email.com</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-detail-icon"><i class="ri-map-pin-line" aria-hidden="true"></i></span>
+          <div>
+            <span class="contact-detail-label">Based in</span>
+            <span>Kinshasa, Ngaliema</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-container" aria-label="Send a message">
+        <h2>Send a message</h2>
+        <p class="contact-form-intro">Fields marked with <span aria-hidden="true">*</span> are required.</p>
+
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Your name <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" autocomplete="name" minlength="2" maxlength="100" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email address <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email" maxlength="254" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">What is this about? <span class="optional-label">Optional</span></label>
+            <input type="text" id="subject" name="subject" placeholder="Project inquiry, collaboration..." maxlength="150">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="5" placeholder="Share a few details about your project..." minlength="10" maxlength="5000" required></textarea>
+            <span class="character-count" id="message-count" aria-live="polite">0 / 5000</span>
+          </div>
+
+          <button type="submit" id="submit-btn">
+            <span>Send message</span>
+            <i class="ri-arrow-right-line" aria-hidden="true"></i>
+          </button>
+          <p id="form-status" class="status-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="container footer-content">
+      <div>
+        <h3>Work with me.</h3>
+        <p>Your vision. My creativity. One collaboration.</p>
+      </div>
+      <div class="footer-actions">
+        <a href="mailto:mbadugracia9@email.com" class="btn-primary">mbadugracia9@email.com</a>
+        <div class="social-links">
+          <a href="https://github.com/mbadugracia9-cpu" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <span class="social-link-pending" aria-label="Discord link not provided" title="Discord link not provided"><i class="fa-brands fa-discord" aria-hidden="true"></i></span>
+          <a href="https://www.linkedin.com/in/gracia-mbadu-b7876130a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/mbadugracia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/mbadugracia" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>&copy; 2026 Gracia MBADU. Designed and developed with semantic HTML, CSS, and JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

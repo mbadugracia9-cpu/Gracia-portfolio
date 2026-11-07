@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090a10" />
+  <title>Portfolio | Developer • Designer • Educator • Musician</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"rel="stylesheet"/>
+  <script>
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem("site-theme") === "light" ? "light" : "dark";
+      document.documentElement.lang = localStorage.getItem("site-language") === "fr" ? "fr" : "en";
+      document.querySelector('meta[name="theme-color"]').content =
+        document.documentElement.dataset.theme === "light" ? "#f4f6fb" : "#090a10";
+    } catch {
+      document.documentElement.dataset.theme = "dark";
+    }
+  </script>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="header container">
+         <nav class="nav">
+            <a href="#" class="nav__logo">
+               <i class="ri-fire-fill"></i>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li>
+                     <a href="#" class="nav__link">
+                        <span>Home</span>
+                        <span>Home</span>
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="#work" class="nav__link">
+                        <span>Projects</span>
+                        <span>Projects</span>
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="#intersection" class="nav__link">
+                        <span>Vision</span>
+                        <span>Vision</span>
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="#testimonials" class="nav__link">
+                        <span>Reviews</span>
+                        <span>Reviews</span>
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="#about" class="nav__link">
+                        <span>About</span>
+                        <span>About</span>
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="#skills" class="nav__link">
+                        <span>Skills</span>
+                        <span>Skills</span>
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="#contact" class="nav__link">
+                        <span>Contact</span>
+                        <span>Contact</span>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+
+            <div class="nav__buttons">
+               <button class="nav__email" id="nav-email">
+                  <span id="nav-copy">mbadugracia9@email.com</span>
+                  <span id="nav-text">Copy email</span>
+               </button>
+               <div class="site-preferences" aria-label="Site preferences">
+                  <button class="site-control" type="button" data-language-toggle aria-label="Switch language to French" title="Switch language to French">
+                     <span class="site-control-face" aria-hidden="true"><i class="ri-translate-2"></i><span data-language-label>FR</span></span>
+                     <span class="site-control-face site-control-face-next" aria-hidden="true"><i class="ri-translate-2"></i><span data-language-label>FR</span></span>
+                  </button>
+                  <button class="site-control" type="button" data-theme-toggle aria-label="Switch to light mode" title="Switch to light mode">
+                     <span class="site-control-face" aria-hidden="true"><i class="ri-sun-line"></i></span>
+                     <span class="site-control-face site-control-face-next" aria-hidden="true"><i class="ri-sun-line"></i></span>
+                  </button>
+               </div>
+   
+               <button class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </button>
+            </div>
+         </nav>
+      </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero container">
+    <div class="hero-text">
+      <div class="status-pill">
+        <span class="status-dot"></span> Available for Select Projects & Workshops
+      </div>
+      <h1>
+        Building where <br />
+        <span class="gradient-text">logic, aesthetics, and sound</span> converge.
+      </h1>
+      <p class="hero-description">
+        I engineer modern web systems, design visual identities, educate aspiring developers, and compose soundscapes. Four practices rooted in one goal: thoughtful human connection.
+      </p>
+      <div class="tag-row">
+        <span class="tag tag-code">Web Developer</span>
+        <span class="tag tag-design">Graphic Designer</span>
+        <span class="tag tag-edu">Educator</span>
+        <span class="tag tag-music">Musician</span>
+        <span class="tag tag-photo">Photographer</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="image-frame">
+        <!-- Replace with your hero photograph -->
+        <img src="images/IMG-20261028-WA0003.jpg" alt="gracia Portrait" class="portrait-img" />
+        <div class="image-overlay">
+          <span>Kinshasa, Ngaliema</span>
+          <span class="image-label">Code • Visuals</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK SHOWCASE WITH JAVASCRIPT FILTERING -->
+  <section id="work" class="container section">
+    <div class="section-header">
+      <div>
+        <h2>Selected Works & Creative Experiences</h2>
+        <p class="section-subtitle">Every projects tells a story. Every creation reflects a vision, a skill, and a purpose</p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="code"><i class="bx bx-code-alt"></i></button>
+        <button class="filter-btn" data-filter="design"><i class="bx bx-palette"></i></button>
+        <button class="filter-btn" data-filter="edu"><i class="fa-solid fa-graduation-cap"></i></button>
+        <button class="filter-btn" data-filter="music"><i class="bx bx-music"></i></button>
+      </div>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid" id="portfolio-grid">
+
+      <!-- ITEM 1: Web Development -->
+      <article class="card" data-category="code">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Code Screenshot" />
+          <span class="category-badge badge-code">Web Development</span>
+        </div>
+        <div class="card-body">
+          <span class="tech-spec">Node JS • Python • JavaScript</span>
+          <h3>Digital Experience & Web Development</h3>
+          <p>
+            Building responsive websites and interactive digital experiences through creativity, structure, and technology.
+          </p>
+          <div class="card-links">
+            <a href="Education.html" class="link link-code">Get to know ↗</a>
+            <a href="#testimonials" class="link-muted">Testimonials ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 2: Graphic Design -->
+      <article class="card" data-category="design">
+        <div class="card-media">
+          <img src="images/photo-1646470742514-b7f676c7110b.avif" alt="Design Identity" />
+          <span class="category-badge badge-design">Graphic Design</span>
+        </div>
+        <div class="card-body">
+          <span class="tech-spec">Branding • Posters • Visual Communication</span>
+          <h3>Visual Identity & Creative Design</h3>
+          <p>
+            Transforming ideas into visual stories through graphic composition, typography, color, and creative communication.
+          </p>
+          <div class="card-links">
+            <a href="Education.html" class="link link-design">Get to know ↗</a>
+            <a href="#testimonials" class="link-muted">Testimonials ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 3: Educator -->
+      <article class="card" data-category="edu">
+        <div class="card-media">
+          <img src="images/photo-1509062522246-3755977927d7.avif" alt="Educator in workshop" />
+          <span class="category-badge badge-edu">Education</span>
+        </div>
+        <div class="card-body">
+          <span class="tech-spec">Teaching • Mentorship • Child Development</span>
+          <h3>Pedagogy & Child Development</h3>
+          <p>
+            Creating meaningful learning experiences that encourage curiosity, confidence, independence, and personal development.
+          </p>
+          <div class="card-links">
+            <a href="Education.html" class="link link-edu">Get to know ↗</a>
+            <a href="#testimonials" class="link-muted">Testimonials ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 4: Musician -->
+      <article class="card" data-category="music">
+        <div class="card-media">
+          <img src="images/premium_photo-1661749939109-b9c14e7ed96c.avif" alt="Music Recording" />
+          <span class="category-badge badge-music">Music</span>
+        </div>
+        <div class="card-body">
+          <span class="tech-spec">Music Education • Child Development • Creativity</span>
+          <h3>Musical Play Time</h3>
+          <p>
+            An educational and musical initiative designed to help children explore creativity, develop musical awareness, and learn through interactive experiences.
+          </p>
+          <div class="card-links">
+            <a href="Education.html" class="link link-music">Get to know ↗</a>
+            <a href="#testimonials" class="link-muted">Testimonials ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 1: Web Development -->
+      <article class="card" data-category="code">
+        <div class="card-media">
+          <img src="images/photo-1522071820081-009f0129c71c.avif" alt="Code Screenshot" />
+          <span class="category-badge badge-code">Web Development</span>
+        </div>
+        <div class="card-body">
+          <span class="tech-spec">Vanilla JS • Web Audio API • Canvas</span>
+          <h3>Real-Time Algorithmic Visualizer</h3>
+          <p>
+            An in-browser audio engine generating real-time geometric visualizers from microphonic sound frequencies at 60 FPS.
+          </p>
+          <div class="card-links">
+            <a href="Education.html" class="link link-code">Get to know ↗</a>
+            <a href="#testimonials" class="link-muted">Testimonials ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 2: Graphic Design -->
+      <article class="card" data-category="design">
+        <div class="card-media">
+          <img src="images/photo-1623281185000-6940e5347d2e.avif" alt="Design Identity" />
+          <span class="category-badge badge-design">Graphic Design</span>
+        </div>
+        <div class="card-body">
+          <span class="tech-spec">Branding • Typography • Print</span>
+          <h3>Kinesis Architecture Studio</h3>
+          <p>
+            Minimalist corporate branding, bespoke typographic rhythm, and physical stationery designed for an eco-architecture firm.
+          </p>
+          <div class="card-links">
+            <a href="Education.html" class="link link-design">Get to know ↗</a>
+            <a href="#testimonials" class="link-muted">Testimonials ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 3: Educator -->
+      <article class="card" data-category="edu">
+        <div class="card-media">
+          <img src="images/premium_photo-1726783323286-fa4f8c754896.avif" alt="Educator in workshop" />
+          <span class="category-badge badge-edu">Education</span>
+        </div>
+        <div class="card-body">
+          <span class="tech-spec">Workshop • Art • Group Activities</span>
+          <h3>Creative Learning & Artistic Workshops</h3>
+          <p>
+            Combining art, games, music, and collaborative activities to make learning more engaging and enjoyable for children.
+          </p>
+          <div class="card-links">
+            <a href="Education.html" class="link link-edu">Get to know ↗</a>
+            <a href="#testimonials" class="link-muted">Testimonials ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 4: Musician -->
+      <article class="card" data-category="music">
+        <div class="card-media">
+          <img src="images/photo-1593697972679-c4041d132a46.avif" alt="Music Recording" />
+          <span class="category-badge badge-music">Music</span>
+        </div>
+        <div class="card-body">
+          <span class="tech-spec">Music Performance • Instruments • Sound</span>
+          <h3>Music, Sound & Creative Expression</h3>
+          <p>
+            Exploring musical expression through instruments, rhythm, sound, and collaborative artistic experiences.
+          </p>
+          <div class="card-links">
+            <a href="Education.html" class="link link-music">Get to know ↗</a>
+            <a href="#testimonials" class="link-muted">Testimonials ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 1: Web Development -->
+      <article class="card" data-category="code">
+        <div class="card-media">
+          <img src="images/photo-1548425083-4261538dbca4.JPG" alt="Code Screenshot" />
+          <span class="category-badge badge-code">Photography</span>
+        </div>
+        <div class="card-body">
+          <span class="tech-spec">Portrait • Events • Visual Storytelling</span>
+          <h3>Photography & Visual Storytelling</h3>
+          <p>
+            Capturing meaningful moments, exploring perspectives, and transforming everyday experiences into visual stories.
+          </p>
+          <div class="card-links">
+            <a href="Education.html" class="link link-code">Get to know ↗</a>
+            <a href="#testimonials" class="link-muted">Testimonials ↗</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY / THE INTERSECTION -->
+  <section id="intersection" class="container section">
+    <div class="philosophy-layout">
+      <div class="philosophy-text">
+        <h2>The Intersection</h2>
+        <p class="lead">Eight dimensions. One creative vision.</p>
+        
+        <div class="philosophy-items">
+          <div class="pillar">
+            <i class="bx bx-code-alt"></i>
+            <span class="pillar-label pillar-code">Innovation</span>
+            <h4>Technology creates possibilities</h4>
+            <p>Architecture that does not buckle under pressure. Clean, semantic structures built to endure.</p>
+          </div>
+          <div class="pillar">
+            <i class="bx bx-palette"></i>
+            <span class="pillar-label pillar-design">Aesthetics</span>
+            <h4>Design gives ideas identity</h4>
+            <p>The visual cadence of whitespace, intentional typographic balance, and deliberate hierarchy.</p>
+          </div>
+          <div class="pillar">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span class="pillar-label pillar-edu">Empowerment</span>
+            <h4>Education shapes minds</h4>
+            <p>Teaching forces you to peel away jargon. If an idea cannot be taught simply, it is poorly designed.</p>
+          </div>
+          <div class="pillar">
+            <i class="bx bx-image"></i>
+            <span class="pillar-label pillar-music">Perspective</span>
+            <h4>Photography captures stories</h4>
+            <p>Turning ordinary moments into meaningful visual stories.</p>
+          </div>
+          <div class="pillar">
+            <i class="bx bx-music"></i>
+            <span class="pillar-label pillar-code">resonance</span>
+            <h4>Music gives emotions a voice</h4>
+            <p>Creating sound and experiences that connect and inspire.</p>
+          </div>
+          <div class="pillar">
+            <i class="fa-regular fa-lightbulb"></i>
+            <span class="pillar-label pillar-design">imagination</span>
+            <h4>Ideas have no boundaries</h4>
+            <p>Exploring original concepts and turning creativity into possibilities.</p>
+          </div>
+          <div class="pillar">
+            <i class="bx bx-group"></i>
+            <span class="pillar-label pillar-edu">connection</span>
+            <h4>creativity brings people together</h4>
+            <p>Building relationships through collaboration, communication and art.</p>
+          </div>
+          <div class="pillar">
+            <i class="fa-solid fa-burst"></i>
+            <span class="pillar-label pillar-music">impact</span>
+            <h4>Purpose turns talent into value</h4>
+            <p>Creating meaningful experiences that make a difference.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="container section">
+    <div class="section-header">
+      <div>
+        <h2>Testimonials</h2>
+        <p class="section-subtitle">Sample quotes are placeholders; replace them with genuine client feedback.</p>
+      </div>
+    </div>
+
+    <div class="testimonial-list" role="list" aria-label="Client testimonials">
+      <article class="testimonial-card" role="listitem">
+        <div class="testimonial-card__border">
+          <div class="testimonial-card__portrait">
+            <i class="ri-user-3-line" aria-hidden="true"></i>
+          </div>
+        </div>
+        <h3 class="testimonial-card__name">Web development client</h3>
+        <span class="testimonial-card__profession">Client testimonial</span>
+        <div class="testimonial-card__info">
+          <i class="ri-information-line testimonial-card__info-icon" aria-hidden="true"></i>
+          <div class="testimonial-card__info-portrait">
+            <i class="ri-user-3-line" aria-hidden="true"></i>
+          </div>
+          <div class="testimonial-card__info-data">
+            <h3>Web development client</h3>
+            <blockquote>“Gracia brings care and clarity to every stage of a project. The collaboration felt thoughtful from the first conversation to the final delivery.”</blockquote>
+            <span>Replace with a real client name</span>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial-card" role="listitem">
+        <div class="testimonial-card__border"><div class="testimonial-card__portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div></div>
+        <h3 class="testimonial-card__name">Graphic design client</h3>
+        <span class="testimonial-card__profession">Client testimonial</span>
+        <div class="testimonial-card__info">
+          <i class="ri-information-line testimonial-card__info-icon" aria-hidden="true"></i>
+          <div class="testimonial-card__info-portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div>
+          <div class="testimonial-card__info-data">
+            <h3>Graphic design client</h3>
+            <blockquote>“The design captured exactly what we wanted to communicate. Every detail felt intentional, and the final result was easy to use.”</blockquote>
+            <span>Replace with a real client name</span>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial-card" role="listitem">
+        <div class="testimonial-card__border"><div class="testimonial-card__portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div></div>
+        <h3 class="testimonial-card__name">Graphic design client</h3>
+        <span class="testimonial-card__profession">Client testimonial</span>
+        <div class="testimonial-card__info">
+          <i class="ri-information-line testimonial-card__info-icon" aria-hidden="true"></i>
+          <div class="testimonial-card__info-portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div>
+          <div class="testimonial-card__info-data">
+            <h3>Graphic design client</h3>
+            <blockquote>“The design captured exactly what we wanted to communicate. Every detail felt intentional, and the final result was easy to use.”</blockquote>
+            <span>Replace with a real client name</span>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial-card" role="listitem">
+        <div class="testimonial-card__border"><div class="testimonial-card__portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div></div>
+        <h3 class="testimonial-card__name">Workshop participant</h3>
+        <span class="testimonial-card__profession">Participant testimonial</span>
+        <div class="testimonial-card__info">
+          <i class="ri-information-line testimonial-card__info-icon" aria-hidden="true"></i>
+          <div class="testimonial-card__info-portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div>
+          <div class="testimonial-card__info-data">
+            <h3>Workshop participant</h3>
+            <blockquote>“The workshop made learning feel welcoming and creative. Gracia encouraged everyone to participate and leave with new confidence.”</blockquote>
+            <span>Replace with a real participant name</span>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial-card" role="listitem">
+        <div class="testimonial-card__border"><div class="testimonial-card__portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div></div>
+        <h3 class="testimonial-card__name">Photography client</h3>
+        <span class="testimonial-card__profession">Client testimonial</span>
+        <div class="testimonial-card__info">
+          <i class="ri-information-line testimonial-card__info-icon" aria-hidden="true"></i>
+          <div class="testimonial-card__info-portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div>
+          <div class="testimonial-card__info-data">
+            <h3>Photography client</h3>
+            <blockquote>“The photographs captured the feeling of the day and the small details we wanted to remember. The whole experience felt relaxed and thoughtful.”</blockquote>
+            <span>Replace with a real client name</span>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial-card" role="listitem">
+        <div class="testimonial-card__border"><div class="testimonial-card__portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div></div>
+        <h3 class="testimonial-card__name">Music collaborator</h3>
+        <span class="testimonial-card__profession">Collaborator testimonial</span>
+        <div class="testimonial-card__info">
+          <i class="ri-information-line testimonial-card__info-icon" aria-hidden="true"></i>
+          <div class="testimonial-card__info-portrait"><i class="ri-user-3-line" aria-hidden="true"></i></div>
+          <div class="testimonial-card__info-data">
+            <h3>Music collaborator</h3>
+            <blockquote>“Her music brought warmth and energy to the project. She listened closely and helped create an atmosphere everyone could enjoy.”</blockquote>
+            <span>Replace with a real collaborator name</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="container section about-section">
+    <div class="about-grid">
+      <div class="about-image-wrapper">
+        <img src="images/IMG-20261028-WA0002.jpg" alt="Alex working" class="about-img" />
+      </div>
+      <div class="about-content">
+        <h2>The Mind Behind the Work</h2>
+        <p>
+          My journey is driven by curiosity, creativity, and a passion for making meaningful things happen.
+
+I am a multidisciplinary creative professional working at the intersection of education, technology, visual arts, and music. From developing digital experiences and designing visual identities to capturing moments through photography and expressing ideas through music, I find inspiration in exploring different forms of creativity.
+
+Education also plays a fundamental role in who I am. As an educator, I believe in the power of learning, mentorship, and creative experiences to shape minds, inspire confidence, and create opportunities.
+        </p>
+        <p>
+          Today, I bring these different disciplines together to transform ideas into meaningful projects, connect with people, and create experiences that go beyond expectations.
+
+I don't believe creativity has just one direction. I believe every talent has the power to make a difference.
+        </p>
+        <a href="form.html" class="btn-primary about-connect">
+          <span>Let's connect</span>
+          <i class="ri-arrow-right-line" aria-hidden="true"></i>
+        </a>
+        <div class="stats-row">
+          <div class="stat"><span class="stat-num">5+</span><span class="stat-desc">Areas of expertise</span></div>
+          <div class="stat"><span class="stat-num">1</span><span class="stat-desc">Creative vision</span></div>
+          <div class="stat"><span class="stat-num">5+</span><span class="stat-desc">Fields of passion</span></div>
+          <div class="stat"><span class="stat-num"><i class="bx bx-infinite" aria-hidden="true"></i></span><span class="stat-desc">Possibilities</span></div>
+        </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="container section skills-section" aria-labelledby="skills-title">
+    <div class="section-header">
+      <div>
+        <h2 id="skills-title">Skills &amp; Strengths</h2>
+        <p class="section-subtitle">A mix of practical expertise and people-focused strengths.</p>
+      </div>
+    </div>
+    <div class="skills-grid">
+      <article class="skill-group">
+        <div class="skill-group-heading">
+          <i class="bx bx-code-alt" aria-hidden="true"></i>
+          <h3>Hard Skills</h3>
+        </div>
+        <ul class="skill-list">
+          <li>HTML &amp; CSS</li>
+          <li>JavaScript</li>
+          <li>Node.js &amp; Python</li>
+          <li>Responsive web design</li>
+          <li>Visual identity &amp; branding</li>
+          <li>Photography &amp; visual storytelling</li>
+          <li>Music &amp; creative expression</li>
+          <li>Education &amp; workshop design</li>
+        </ul>
+      </article>
+      <article class="skill-group">
+        <div class="skill-group-heading">
+          <i class="bx bx-group" aria-hidden="true"></i>
+          <h3>Soft Skills</h3>
+        </div>
+        <ul class="skill-list">
+          <li>Communication</li>
+          <li>Creativity</li>
+          <li>Collaboration</li>
+          <li>Mentorship</li>
+          <li>Adaptability</li>
+          <li>Problem-solving</li>
+          <li>Empathy</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="footer">
+    <div class="container footer-content">
+      <div>
+        <h3>Work with me.</h3>
+        <p>Your vision. My creativity. One collaboration.</p>
+      </div>
+      <div class="footer-actions">
+        <a href="mailto:mbadugracia9@email.com" class="btn-primary">mbadugracia9@email.com</a>
+        <div class="social-links">
+          <a href="https://github.com/mbadugracia9-cpu" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <span class="social-link-pending" aria-label="Discord link not provided" title="Discord link not provided"><i class="fa-brands fa-discord" aria-hidden="true"></i></span>
+          <a href="https://www.linkedin.com/in/gracia-mbadu-b7876130a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/mbadugracia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/mbadugracia" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>&copy; 2026 Gracia MBADU. Designed and developed with semantic HTML, CSS, and JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
